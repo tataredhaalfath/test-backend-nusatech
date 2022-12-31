@@ -1,0 +1,1098 @@
+{
+	"info": {
+		"_postman_id": "7ea0982f-093b-41f7-8a3f-4bf5519fbacc",
+		"name": "skill-test-nusatech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-oemDcSbm+iD+Lc9UEiUo/SRLMA0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:18:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Signup success, Please verify your email!\",\n    \"data\": {\n        \"id\": 9\n    }\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"32-pcPyJZT5ABp3l1qOFfsQrRKLXYg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:18:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"email already exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "error email not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"usera@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-oQO4lZT2heHpHvUB9NQ5LglXtqI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:21:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"User not found!\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "292"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"124-no4T9T+PiohEYN6W600onYc1YpI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:21:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 9,\n        \"email\": \"user@gmail.com\",\n        \"status\": \"verified\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8\"\n    }\n}"
+				},
+				{
+					"name": "error password doesn't match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"1234aa5678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-u1Lk93itgfWDMqT+M1Ks+H5aT4s\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:21:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Password not correct!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"detail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/detail",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"detail"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-k/hT2/s+90Qba4oBsN9lMhSBlfk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:24:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"staus\": \"success\",\n    \"data\": {\n        \"id\": 9,\n        \"email\": \"user@gmail.com\",\n        \"status\": \"verified\",\n        \"createdAt\": \"2022-12-31T03:18:35.000Z\",\n        \"updatedAt\": \"2022-12-31T03:21:45.000Z\",\n        \"wallets\": [\n            {\n                \"id\": 1,\n                \"amount\": 10,\n                \"currency\": {\n                    \"id\": 9,\n                    \"createdAt\": \"2022-12-31T04:24:10.000Z\",\n                    \"updatedAt\": \"2022-12-31T04:24:10.000Z\"\n                }\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "error authorization",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/detail",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"detail"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-pS1NHrrGy3wmO7nAbLTwcVPf3oc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:22:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messge\": \"Authorization Not Found!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user1@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "error authorization",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgiLCJlbWFpbCI6InRhdGFyZWRoYWFsZmF0aDc0QGdtYWlsLmNvbSIsInN0YXR1cyI6InZlcmlmaWVkIiwiaWF0IjoxNjcyNDU2MTMyLCJleHAiOjE2NzI0NzQxMzJ9.M84sRTgOkr3B-O8BKRNKiD5lruHxUwp7rHTsTrgLn6s",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-pS1NHrrGy3wmO7nAbLTwcVPf3oc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:25:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messge\": \"Authorization Not Found!\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"87-LmVaT7ChRDVH8XbL9Ac5KytaRX8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:25:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 9,\n        \"email\": \"user1@gmail.com\",\n        \"status\": \"pending\"\n    },\n    \"message\": \"Update Success, Please verify your email!\"\n}"
+				},
+				{
+					"name": "error validation",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgiLCJlbWFpbCI6InRhdGFyZWRoYWFsZmF0aDc0QGdtYWlsLmNvbSIsInN0YXR1cyI6InZlcmlmaWVkIiwiaWF0IjoxNjcyNDU2MTMyLCJleHAiOjE2NzI0NzQxMzJ9.M84sRTgOkr3B-O8BKRNKiD5lruHxUwp7rHTsTrgLn6s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-J30H44R+k+0joz8x6PRUIEeDGcA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:25:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        {\n            \"type\": \"required\",\n            \"message\": \"The 'email' field is required.\",\n            \"field\": \"email\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "signout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/signout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/signout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-oYSSCN1D6UMNl4A0DK0kxFN5anc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:26:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"succes\",\n    \"message\": \"logout success\"\n}"
+				},
+				{
+					"name": "error authorization",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRhdGFyZWRoYWFsZmF0aDEzQGdtYWlsLmNvbSIsInN0YXR1cyI6InJlZ2lzdGVyZWQiLCJpYXQiOjE2NzI0MTM3ODYsImV4cCI6MTY3MjQzMTc4Nn0.Gx9RFHuFzyXP16gEyCezBaEry75J6VVGFaZd7v-bm-k",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/signout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signout"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-pS1NHrrGy3wmO7nAbLTwcVPf3oc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:26:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messge\": \"Authorization Not Found!\"\n}"
+				},
+				{
+					"name": "error invalid token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwic3RhdHVzIjoidmVyaWZpZWQiLCJpYXQiOjE2NzI0NTY5MDUsImV4cCI6MTY3MjQ3NDkwNX0.y9wAOC9JlQ0KuYwCWbFx25CNu8qXSC3v0G_RlbeKbd8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/signout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signout"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-eDPqdLLTmB/dClwrVrTAUxcrXNM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:26:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messge\": \"Invalid Token!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"confirm",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqg"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"confirm",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqa"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-vfxXlyQ4F0olUGJN91RMwadDLVo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:20:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"not found!\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"confirm",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjcyNDU2NzE1LCJleHAiOjE2NzI0NzQ3MTV9.rJXhOJmyaZXZ475lXwqLh4Q8t4-Tput2W7ziYnZ8Cqg"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-6UK5xkLIm/18y5OjmHeRVmslQrg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Dec 2022 03:19:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification Success\"\n}"
+				}
+			]
+		}
+	]
+}
